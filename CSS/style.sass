@@ -1,0 +1,27 @@
+// Перемененные
+$bgColor: yellow
+$bg: red
+$heightBlock: 200px
+$border: 4px solid #ccc
+
+
+
+//Обычные свойства
+
+*
+    padding: 0
+    margin: 0
+
+body
+    background: $bg
+
+.block
+    background: $bgColor
+    height: 100px
+    margin-bottom: 20px
+
+.block:not(.first)
+    background: $bgColor
+    height: $heightBlock
+    margin-bottom: 20px
+    border: $border
