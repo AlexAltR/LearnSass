@@ -14,9 +14,23 @@
     color: $link
 
     &:hover
-        color: $hover
+        color: darken($link, 20%) //Применение функции
     &:active
         color: $active
     &:visited
         color: $visited
-            
+
+//Миксин для #grid     
+@mixin grid($cols, $margin)
+    float: left
+    background: #ce3d3d
+    margin-right: $margin
+    margin-bottom: $margin
+    height: 150px
+    width: ((100% - (($cols - 1) * $margin)) / $cols)
+
+    //Псевдокласс для крайнего элемента
+    &:nth-child(#{$cols}n)
+        margin-right: 0
+        
+    

@@ -13,18 +13,20 @@
 
 body
     background: #fff
+    
 
 .block
     background: $bgColor
     height: 100px
     margin-bottom: 20px
+    
 
 .block:not(.first)
     background: $bgColor
     height: $heightBlock
-    margin-bottom: 20px
     width: $blockWidht
     border: $border
+    margin: 20px auto
     @include padd(20px 10px 50px 25px)
 
 //Вложенность
@@ -38,7 +40,8 @@ body
 
     li //Вложенность
         float: left
-        margin-right: 10px
+        width: (100% / 3) // арифметическое действие
+        //margin-right: 10px
 
         a //Вложенность
             @include font(green, bold)
@@ -55,5 +58,12 @@ body
         //color: $bg
 
 a
-    @include link(#000 , red , blue , green )
+    @include link(silver , red , blue , green )
     
+#grid
+    float: left
+    width: 100%
+
+    div // вложенность
+        @include grid($cols: 4, $margin: 2%)
+        
