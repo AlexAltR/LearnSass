@@ -1,24 +1,10 @@
-// Перемененные
-$bgColor: yellow
-$bg: red
-$heightBlock: 200px
-$blockWidht: 500px
-$border: 4px solid #ccc
-$mainFontSize: 14px
+///import files
 
-//Mixin
-
-@mixin font($color, $fontW)
-    font-size: $mainFontSize
-    font-weight: $fontW
-    font-family: Arial, sans-serif
-    color: $color
-
-@mixin padd($padd...) //Передаем несколько аргументов (не знаем сколько передадим)
-    padding: $padd
-
+@import "_variebles"
+@import "_mixins"
     
-
+    
+    
 //Обычные свойства
 
 *
@@ -26,7 +12,7 @@ $mainFontSize: 14px
     margin: 0
 
 body
-    background: $bg
+    background: #fff
 
 .block
     background: $bgColor
@@ -58,6 +44,9 @@ body
             @include font(green, bold)
             //color: #84b5f1
             
+            //Псевдокласс для а
+            &:hover
+                color: $bg
             
             
     
@@ -65,5 +54,6 @@ body
         @include font($bg , light)
         //color: $bg
 
-//#central_block > ul 
-//    list-style: none
+a
+    @include link(#000 , red , blue , green )
+    

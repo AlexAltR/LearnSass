@@ -4,7 +4,7 @@
 }
 
 body {
-  background: red;
+  background: #fff;
 }
 
 .block {
@@ -43,10 +43,30 @@ body {
   color: green;
 }
 
+#central_block li a:hover {
+  color: red;
+}
+
 #central_block a {
   font-size: 14px;
   font-weight: light;
   font-family: Arial, sans-serif;
   color: red;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: blue;
+}
+
+a:visited {
+  color: green;
 }
 /*# sourceMappingURL=style.css.map */
